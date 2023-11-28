@@ -6,8 +6,10 @@ import Image from "next/image";
 
 import { Metadata } from "next";
 
+  // TODO(danish): this will be dynamic according to the blog opened
+
 export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
+  title: "Blog Details Page",
   description: "This is Blog Details Page for Startup Nextjs Template",
   // other metadata
 };
