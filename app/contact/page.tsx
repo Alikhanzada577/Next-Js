@@ -4,8 +4,8 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Saidkhan Technologies",
-  description: "Know the details to reach Saidkhan Technologies.",
+  title: "Contact Us | BRAIN HUB LABS",
+  description: "Know the details to reach BrainHub Labs.",
   // other metadata
 };
 
@@ -13,8 +13,10 @@ const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Contact Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="Contact Us"
+        description="If you like to work with us then drop us a message using the contact form.
+        Or get in touch using email, skype or contact number.
+        See you!"
       />
 
       <Contact />
