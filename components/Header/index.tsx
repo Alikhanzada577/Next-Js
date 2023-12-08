@@ -56,8 +56,8 @@ const Header = () => {
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                <h1 className="w-52 text-2xl font-bold text-black dark:text-white sm:text-2xl">
-                  BRAINHUB LABS
+                <h1 className="w-52 text-2xl font-bold text-black dark:text-primary sm:text-2xl">
+                  {`{Brainhub Labs}`}
                 </h1>
               </Link>
             </div>
@@ -93,7 +93,7 @@ const Header = () => {
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
-                  <ul className="block lg:flex lg:space-x-12">
+                  <ul className="block lg:flex lg:space-x-48">
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (
@@ -146,23 +146,6 @@ const Header = () => {
                     ))}
                   </ul>
                 </nav>
-              </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/signup"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link>
-                <div>
-                  <ThemeToggler />
-                </div>
               </div>
             </div>
           </div>

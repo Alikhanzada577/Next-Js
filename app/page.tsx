@@ -13,7 +13,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Software Engineering Company | Saidkhan Technologies",
-  description: "We are Web and Mobile Desigining, Development and Marketing Agency",
+  description: "We are one stop web and mobile agency.",
   // other metadata
 };
 
@@ -23,12 +23,6 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
-      <Video />
-      <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
       <Blog />
       <Contact />
     </>
