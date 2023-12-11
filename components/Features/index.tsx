@@ -2,6 +2,7 @@ import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+
 interface ServiceBlockProps {
     id?: number;
     title: string;
@@ -22,7 +23,7 @@ interface ServiceBlockProps {
 }
 
 const WEB_IMAGE_DIMENSIONS = { width: 500, height: 288 };
-const MOBILE_IMAGE_DIMENSIONS = { width: 208, height: 424 };
+const MOBILE_IMAGE_DIMENSIONS = { width: 248, height: 454 };
 
 const ServicesData: ServiceBlockProps[] = [
     {
@@ -52,7 +53,64 @@ const ServicesData: ServiceBlockProps[] = [
                 company: "Real Estate Enterprise"
             }
         }
+    },
+    {
+        id: 2,
+        title: "App Development",
+        description:"Embark on Android and iOS app creation with our expert guidance, from concept to launch. Our team ensures technical feasibility, responsiveness, and scalability, optimizing your app's design for top-notch performance.\n\n✅ Comprehensive guidance from ideation to final launch.\n✅ Services include UI/UX design, feature customizations, testing.\n✅ Third-party integrations for enhanced functionality.\n✅ Secure deployments for Android and iOS apps.\n✅ User-centric approach with crucial feedback validation.",
+            
+            image: {
+            imageSrc: "/images/services/fitness1.png",
+            width:MOBILE_IMAGE_DIMENSIONS.width,
+            height: MOBILE_IMAGE_DIMENSIONS.height
+        },
+        userCase: {
+            id: 2,
+            title: "Fitness App Developed For a Manchester-based Fitness Company",
+            description:
+                "Streamline fitness management effortlessly with our all-encompassing software solution, tailored for a Manchester-based fitness company.Is Next Line" ,
+            image: {
+                imageSrc: "/images/services/fitness2.png",
+                width:MOBILE_IMAGE_DIMENSIONS.width,
+                height: MOBILE_IMAGE_DIMENSIONS.height
+            },
+            type: "App Case",
+            testimonial: {
+                review: "BrainHub Labs exceeded our expectations in developing our mobile app, showcasing exceptional technical expertise and innovation. The app's seamless blend of stunning visuals and high functionality delivers an enjoyable user experience. The BrainHub Labs team demonstrated professionalism, clear communication, and a commitment to aligning the product with our needs. We highly recommend BrainHub Labs for top-notch mobile app development; we couldn't be happier with the results",
+                position: "CEO",
+                company: "Fitness Company"
+            }
+        }
+    },
+    {
+        id: 3,
+        title: "Digital Marketing",
+        description:
+            "Our team specializes in enhancing digital marketing strategies, guiding clients from conceptualization to execution. We evaluate the feasibility of approaches, optimize for reach and conversion, and prioritize user feedback.\n\n✅ Expert guidance from conceptualization to execution.\n✅ Prioritization of user feedback for strategy validation.\n✅ Well-defined process flow for high-impact campaigns.\n✅ Utilization of a comprehensive digital marketing ecosystem.\n✅ Goal-driven innovation for results-oriented solutions.",
+        image: {
+            imageSrc: "/images/services/Digital.png",
+            width:MOBILE_IMAGE_DIMENSIONS.width,
+            height: MOBILE_IMAGE_DIMENSIONS.height
+        },
+        userCase: {
+            id: 3,
+            title: "Digital Marketing Strategy Crafted for a Bristol-based E-commerce Venture",
+            description:
+                "Elevate your online presence seamlessly with our comprehensive digital marketing strategy, custom-tailored for a Bristol-based E-commerce venture.",
+            image: {
+                imageSrc: "/images/services/fitness2.png",
+                width:MOBILE_IMAGE_DIMENSIONS.width,
+                height: MOBILE_IMAGE_DIMENSIONS.height
+            },
+            type: "Marketing Case",
+            testimonial: {
+                review: "BrainHub Labs' marketing services surpassed our expectations. Their strategic approach and innovative techniques provided our brand with a remarkable presence. The team's professionalism, clear communication, and commitment to our needs were evident throughout. We highly recommend BrainHub Labs for outstanding marketing results",
+                position: "CEO",
+                company: "E-commerce Store"
+            }
+        }
     }
+
 ];
 
 const ServiceBlock: FC<ServiceBlockProps> = ({
@@ -84,8 +142,8 @@ const ServiceBlock: FC<ServiceBlockProps> = ({
                         {title}
                     </p>
 
-                    <p className=" mb-12 text-center text-base !leading-relaxed text-white sm:text-lg md:text-left md:text-xl">
-                        {description}
+                    <p className=" mb-12 text-center text-base !leading-relaxed text-white sm:text-lg md:text-left md:text-xl whitespace-pre-wrap">
+                       {description}
                     </p>
                 </div>
             </div>
@@ -101,7 +159,7 @@ const ServiceBlock: FC<ServiceBlockProps> = ({
                         {userCase.title}
                     </p>
 
-                    <p className=" mb-12 text-center text-base !leading-relaxed text-white sm:text-lg md:text-left md:text-xl">
+                    <p className=" mb-12 text-center text-base !leading-relaxed text-white sm:text-lg md:text-left md:text-xl ">
                         {userCase.description}
                     </p>
                 </div>
@@ -178,6 +236,8 @@ const Features = () => {
                         </p>
                     </div>
                 </div>
+               
+              
 
                 <div className="container flex w-full flex-col">
                     <div className="mb-12 flex w-full justify-center md:mb-24">
