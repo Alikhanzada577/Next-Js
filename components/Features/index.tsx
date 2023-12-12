@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import './technologies.css';
 
 interface ServiceBlockProps {
     id?: number;
@@ -207,6 +207,10 @@ const ServiceBlock: FC<ServiceBlockProps> = ({
     );
 };
 
+const TECHNOLOGIES_SRC=["/images/services/js.png","/images/services/react.png","/images/services/vue.png",
+                        "/images/services/reactnative.webp","/images/services/nodejs.png","/images/services/aws.png",
+                        "/images/services/firebase.svg","/images/services/mongodb.svg"];
+
 const Features = () => {
     return (
         <>
@@ -229,16 +233,23 @@ const Features = () => {
                     ))}
                 </div>
 
-                <div className="flex w-full flex-col ">
-                    <div className="flex w-full justify-center">
-                        <p className="mb-4 text-center text-3xl font-bold leading-tight text-primary sm:text-4xl sm:leading-tight md:mb-8 md:text-left md:text-5xl md:leading-tight">
-                            Technologies For Software Development
-                        </p>
+                <div>
+                    <div className="flex w-full flex-col ">
+                        <div className="flex w-full justify-center">
+                            <p className="mb-4 text-center text-3xl font-bold leading-tight text-primary sm:text-4xl sm:leading-tight md:mb-8 md:text-left md:text-5xl md:leading-tight">
+                                Technologies For Software Development
+                            </p>
+                        </div>
                     </div>
+                            <div className="technologies-row ">
+                                {TECHNOLOGIES_SRC.map((src)=>{
+                                    return(
+                                        <img className="technologies" src={src}/>
+                                    )
+                                })}
+                                       
+                            </div>
                 </div>
-               
-              
-
                 <div className="container flex w-full flex-col">
                     <div className="mb-12 flex w-full justify-center md:mb-24">
                         <p className="mb-4 text-center text-3xl font-bold leading-tight text-primary sm:text-4xl sm:leading-tight md:mb-8 md:text-left md:text-5xl md:leading-tight">

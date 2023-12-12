@@ -1,0 +1,19 @@
+.technologies-row {
+    display: flex;
+    justify-content: space-between; 
+    padding: 30px;
+  }
+  .technologies {
+    height: 120px;
+    width: 120px; 
+}
+@media (max-width: 800px) {
+    .technologies-row {
+      flex-wrap: wrap;
+      
+    }
+    .technologies-row img {
+        margin: auto;       
+    }
+  }
+ 
