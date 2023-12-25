@@ -1,15 +1,23 @@
-type Author = {
-  name: string;
-  image: string;
-  designation: string;
-};
 
-export type Blog = {
-  id: number;
-  title: string;
-  paragraph: string;
-  image: string;
-  author: Author;
-  tags: string[];
-  publishDate: string;
-};
+type PostAuthor = {
+  name: string;
+  avatar?:string;
+  github?: string;
+  profile_image:string;
+}
+
+
+export type Post = {
+  slug: string,
+  date: string,
+  title: string,
+  description: string,
+  tags: string[],
+  id: string,
+  bodyHtml?: string,
+  coverImage?: string,
+  author? : PostAuthor,
+  postUrl?: string,
+  cover:string,
+  
+}
