@@ -98,7 +98,7 @@ const ServicesData: ServiceBlockProps[] = [
             description:
                 "Elevate your online presence seamlessly with our comprehensive digital marketing strategy, custom-tailored for a Bristol-based E-commerce venture.",
             image: {
-                imageSrc: "/images/services/fitness2.png",
+                imageSrc: "/images/services/Digital2.png",
                 width:MOBILE_IMAGE_DIMENSIONS.width,
                 height: MOBILE_IMAGE_DIMENSIONS.height
             },
