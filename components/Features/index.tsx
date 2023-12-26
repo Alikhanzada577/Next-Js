@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import './technologies.css';
+import "./technologies.css";
 
 interface ServiceBlockProps {
     id?: number;
@@ -57,21 +57,22 @@ const ServicesData: ServiceBlockProps[] = [
     {
         id: 2,
         title: "App Development",
-        description:"Embark on Android and iOS app creation with our expert guidance, from concept to launch. Our team ensures technical feasibility, responsiveness, and scalability, optimizing your app's design for top-notch performance.\n\n✅ Comprehensive guidance from ideation to final launch.\n✅ Services include UI/UX design, feature customizations, testing.\n✅ Third-party integrations for enhanced functionality.\n✅ Secure deployments for Android and iOS apps.\n✅ User-centric approach with crucial feedback validation.",
-            
-            image: {
+        description:
+            "Embark on Android and iOS app creation with our expert guidance, from concept to launch. Our team ensures technical feasibility, responsiveness, and scalability, optimizing your app's design for top-notch performance.\n\n✅ Comprehensive guidance from ideation to final launch.\n✅ Services include UI/UX design, feature customizations, testing.\n✅ Third-party integrations for enhanced functionality.\n✅ Secure deployments for Android and iOS apps.\n✅ User-centric approach with crucial feedback validation.",
+
+        image: {
             imageSrc: "/images/services/fitness1.png",
-            width:MOBILE_IMAGE_DIMENSIONS.width,
+            width: MOBILE_IMAGE_DIMENSIONS.width,
             height: MOBILE_IMAGE_DIMENSIONS.height
         },
         userCase: {
             id: 2,
             title: "Fitness App Developed For a Manchester-based Fitness Company",
             description:
-                "Streamline fitness management effortlessly with our all-encompassing software solution, tailored for a Manchester-based fitness company.Is Next Line" ,
+                "Streamline fitness management effortlessly with our all-encompassing software solution, tailored for a Manchester-based fitness company.Is Next Line",
             image: {
                 imageSrc: "/images/services/fitness2.png",
-                width:MOBILE_IMAGE_DIMENSIONS.width,
+                width: MOBILE_IMAGE_DIMENSIONS.width,
                 height: MOBILE_IMAGE_DIMENSIONS.height
             },
             type: "App Case",
@@ -89,7 +90,7 @@ const ServicesData: ServiceBlockProps[] = [
             "Our team specializes in enhancing digital marketing strategies, guiding clients from conceptualization to execution. We evaluate the feasibility of approaches, optimize for reach and conversion, and prioritize user feedback.\n\n✅ Expert guidance from conceptualization to execution.\n✅ Prioritization of user feedback for strategy validation.\n✅ Well-defined process flow for high-impact campaigns.\n✅ Utilization of a comprehensive digital marketing ecosystem.\n✅ Goal-driven innovation for results-oriented solutions.",
         image: {
             imageSrc: "/images/services/Digital.png",
-            width:MOBILE_IMAGE_DIMENSIONS.width,
+            width: MOBILE_IMAGE_DIMENSIONS.width,
             height: MOBILE_IMAGE_DIMENSIONS.height
         },
         userCase: {
@@ -99,7 +100,7 @@ const ServicesData: ServiceBlockProps[] = [
                 "Elevate your online presence seamlessly with our comprehensive digital marketing strategy, custom-tailored for a Bristol-based E-commerce venture.",
             image: {
                 imageSrc: "/images/services/Digital2.png",
-                width:MOBILE_IMAGE_DIMENSIONS.width,
+                width: MOBILE_IMAGE_DIMENSIONS.width,
                 height: MOBILE_IMAGE_DIMENSIONS.height
             },
             type: "Marketing Case",
@@ -110,7 +111,6 @@ const ServicesData: ServiceBlockProps[] = [
             }
         }
     }
-
 ];
 
 const ServiceBlock: FC<ServiceBlockProps> = ({
@@ -124,15 +124,19 @@ const ServiceBlock: FC<ServiceBlockProps> = ({
             <div className="mb-24 flex w-full flex-col-reverse md:mb-48 md:flex-row">
                 {/* Image Column */}
 
-                <div className="flex w-full flex-col justify-center">
-                    <div className="flex">
-                        <Image
-                            src={image.imageSrc}
-                            alt="coffee shop image"
-                            width={image.width}
-                            height={image.height}
-                        />
-                    </div>
+                <div
+                    className={`flex w-full justify-start ${
+                        title === "App Development"
+                            ? "justify-center md:justify-start"
+                            : ""
+                    }`}
+                >
+                    <Image
+                        src={image.imageSrc}
+                        alt="coffee shop image"
+                        width={image.width}
+                        height={image.height}
+                    />
                 </div>
 
                 {/* Text Column */}
@@ -142,8 +146,8 @@ const ServiceBlock: FC<ServiceBlockProps> = ({
                         {title}
                     </p>
 
-                    <p className=" mb-12 text-center text-base !leading-relaxed text-white sm:text-lg md:text-left md:text-xl whitespace-pre-wrap">
-                       {description}
+                    <p className=" mb-12 whitespace-pre-wrap text-center text-base !leading-relaxed text-white sm:text-lg md:text-left md:text-xl">
+                        {description}
                     </p>
                 </div>
             </div>
@@ -167,7 +171,13 @@ const ServiceBlock: FC<ServiceBlockProps> = ({
                 {/* Image Column */}
 
                 <div className="flex w-full flex-col">
-                    <div className="flex flex-row justify-end">
+                    <div
+                        className={`flex flex-row justify-end ${
+                            title === "App Development"
+                                ? "justify-center md:justify-end"
+                                : ""
+                        } `}
+                    >
                         <Image
                             src={userCase.image.imageSrc}
                             alt="coffee shop image"
@@ -207,9 +217,16 @@ const ServiceBlock: FC<ServiceBlockProps> = ({
     );
 };
 
-const TECHNOLOGIES_SRC=["/images/services/js.png","/images/services/react.png","/images/services/vue.png",
-                        "/images/services/reactnative.webp","/images/services/nodejs.png","/images/services/aws.png",
-                        "/images/services/firebase.svg","/images/services/mongodb.svg"];
+const TECHNOLOGIES_SRC = [
+    "/images/services/js.png",
+    "/images/services/react.png",
+    "/images/services/vue.png",
+    "/images/services/reactnative.webp",
+    "/images/services/nodejs.png",
+    "/images/services/aws.png",
+    "/images/services/firebase.svg",
+    "/images/services/mongodb.svg"
+];
 
 const Features = () => {
     return (
@@ -233,6 +250,7 @@ const Features = () => {
                     ))}
                 </div>
 
+                {/* TECHNOLOGIES ROW */}
                 <div>
                     <div className="flex w-full flex-col ">
                         <div className="flex w-full justify-center">
@@ -241,15 +259,19 @@ const Features = () => {
                             </p>
                         </div>
                     </div>
-                            <div className="technologies-row ">
-                                {TECHNOLOGIES_SRC.map((src)=>{
-                                    return(
-                                        <img className="technologies" src={src}/>
-                                    )
-                                })}
-                                       
-                            </div>
+                    <div className="technologies-row ">
+                        {TECHNOLOGIES_SRC.map((src, idx) => {
+                            return (
+                                <img
+                                    key={idx}
+                                    className="technologies"
+                                    src={src}
+                                />
+                            );
+                        })}
+                    </div>
                 </div>
+                {/* PRICES ROW */}
                 <div className="container flex w-full flex-col">
                     <div className="mb-12 flex w-full justify-center md:mb-24">
                         <p className="mb-4 text-center text-3xl font-bold leading-tight text-primary sm:text-4xl sm:leading-tight md:mb-8 md:text-left md:text-5xl md:leading-tight">
