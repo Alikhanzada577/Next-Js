@@ -20,7 +20,7 @@ const SingleBlog = ({ blog }: { blog: Post }) => {
         >
           {tags?.length > 0 && (
             <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold capitalize text-white">
-            href={`/blog-details/${id}`}{tags[0]}
+            {tags[0]}
           </span>
           )}
           
@@ -40,7 +40,7 @@ const SingleBlog = ({ blog }: { blog: Post }) => {
             {description}
           </p>
           <div className="flex items-center">
-            <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
+            {/* <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
               <div className="mr-4">
                 <div className="relative h-10 w-10 overflow-hidden rounded-full">
                   <Image src={author.profile_image} alt="author" fill />
@@ -50,9 +50,9 @@ const SingleBlog = ({ blog }: { blog: Post }) => {
                 <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
                   By {author.name}
                 </h4>
-                {/* <p className="text-xs text-body-color">{author.designation}</p> */}
+                <p className="text-xs text-body-color">{author.designation}</p>
               </div>
-            </div>
+            </div> */}
             <div className="inline-block">
               <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
                 Date

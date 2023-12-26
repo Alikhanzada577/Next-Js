@@ -86,7 +86,7 @@ export default function BlogDetailsPage({params, searchParams}) {
               </h2>
               <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                 <div className="flex flex-wrap items-center">
-                  <div className="mb-5 mr-10 flex items-center">
+                  {/* <div className="mb-5 mr-10 flex items-center">
                     <div className="mr-4">
                       <div className="relative h-10 w-10 overflow-hidden rounded-full">
                       <Image src={post.author.profile_image ?? placeholderBlogImage} alt="author" fill />
@@ -97,7 +97,7 @@ export default function BlogDetailsPage({params, searchParams}) {
                         By <span>{post.author.name}</span>
                       </span>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="mb-5 flex items-center">
                     <p className="mr-5 flex items-center text-base font-medium text-body-color">
                       <span className="mr-3">
@@ -120,7 +120,7 @@ export default function BlogDetailsPage({params, searchParams}) {
                       </span>
                       {post.date}
                     </p>
-                    <p className="mr-5 flex items-center text-base font-medium text-body-color">
+                    {/* <p className="mr-5 flex items-center text-base font-medium text-body-color">
                       <span className="mr-3">
                         <svg
                           width="18"
@@ -134,8 +134,8 @@ export default function BlogDetailsPage({params, searchParams}) {
                         </svg>
                       </span>
                       50
-                    </p>
-                    <p className="flex items-center text-base font-medium text-body-color">
+                    </p> */}
+                    {/* <p className="flex items-center text-base font-medium text-body-color">
                       <span className="mr-3">
                         <svg
                           width="20"
@@ -148,7 +148,7 @@ export default function BlogDetailsPage({params, searchParams}) {
                         </svg>
                       </span>
                       35
-                    </p>
+                    </p> */}
                   </div>
                 </div>
                 <div className="mb-5">

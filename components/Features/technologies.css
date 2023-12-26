@@ -1,19 +1,26 @@
 .technologies-row {
     display: flex;
     justify-content: space-between; 
-    padding: 30px;
+    padding: 70px;
   }
   .technologies {
-    height: 120px;
-    width: 120px; 
+    height: 70px;
+    width: auto; 
+
 }
 @media (max-width: 800px) {
     .technologies-row {
       flex-wrap: wrap;
+      padding:30px;
       
     }
     .technologies-row img {
         margin: auto;       
+    }
+    .technologies{
+      height: 55px;
+       width: auto; 
+       padding:5px;
     }
   }
  
